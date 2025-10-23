@@ -19,7 +19,7 @@ It demonstrates basic CRUD operations using an in-memory list (`MOVIES`) as a mo
 
 ## Tech Stack
 
-- **Python 3.10+**
+- **Python 3.13+**
 - **FastAPI**
 - **Uvicorn** (for local server)
 
