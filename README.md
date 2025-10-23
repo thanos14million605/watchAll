@@ -1,11 +1,11 @@
-# 🎬 watchAll – Movie Catalogue API (FastAPI)
+# watchAll – Movie Catalogue API (FastAPI)
 
 **watchAll** is a simple RESTful Movie Catalogue API built with FastAPI.  
 It demonstrates basic CRUD operations using an in-memory list (`MOVIES`) as a mock database.
 
 ---
 
-## 🚀 Features
+## Features
 
 - List all movies or filter by **genre** or **director**
 - Retrieve a single movie by **ID**
@@ -17,7 +17,7 @@ It demonstrates basic CRUD operations using an in-memory list (`MOVIES`) as a mo
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Python 3.10+**
 - **FastAPI**
@@ -25,18 +25,18 @@ It demonstrates basic CRUD operations using an in-memory list (`MOVIES`) as a mo
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ```bash
-# 1️⃣ Create and activate a virtual environment
+# 1. Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate        # On Linux/Mac
 venv\Scripts\activate           # On Windows
 
-# 2️⃣ Install dependencies
+# 2️. Install dependencies
 pip install fastapi uvicorn
 
-# 3️⃣ Run the API
+# 3️. Run the API
 uvicorn main:app --reload
 📚 Available Endpoints
 Method	Endpoint	Description
@@ -54,31 +54,21 @@ After starting the app, open your browser at:
 Run these example tests:
 
 GET /api/v1/movies → returns all 5 movies
-
 GET /api/v1/movies?genre=Math → returns []
-
 GET /api/v1/movies?genre=Action → returns Desert Run
-
 GET /api/v1/movies/2 → returns Desert Run
-
 GET /api/v1/movies/99 → { "detail": "Movie not found" }
-
 POST /api/v1/movies → adds new film with id = len(MOVIES)
-
 PUT /api/v1/movies/1 → replaces movie at index 1
-
 PATCH /api/v1/movies/0 → partially updates only specified fields
-
 DELETE /api/v1/movies/3 → removes movie, reindexes IDs 0..n-1
 
-🧠 Notes
-⚠️ This project uses an in-memory list as a mock database.
+Notes
+This project uses an in-memory list as a mock database.
 All data is lost when the server restarts.
 Future versions could use SQLite or MongoDB for persistence.
 
-🏁 Example Run
-bash
-Copy code
+Example Run
 INFO:     Will watch for changes in these directories: ['.']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 Visit:
@@ -87,7 +77,6 @@ Swagger UI → http://localhost:8000/docs
 
 ReDoc → http://localhost:8000/redoc
 
-👨‍💻 Author
-Ebrima Gajaga
+Author: Ebrima Gajaga
 Built with ❤️ using FastAPI.
 ```
