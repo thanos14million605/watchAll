@@ -33,10 +33,10 @@ python -m venv venv
 source venv/bin/activate        # On Linux/Mac
 venv\Scripts\activate           # On Windows
 
-# 2️. Install dependencies
+# 2. Install dependencies
 pip install fastapi uvicorn
 
-# 3️. Run the API
+# 3. Run the API
 uvicorn main:app --reload
 📚 Available Endpoints
 Method	Endpoint	Description
@@ -47,9 +47,9 @@ PUT	/api/v1/movies/{movie_id}	Replace an existing movie (full update)
 PATCH	/api/v1/movies/{movie_id}	Partially update a movie
 DELETE	/api/v1/movies/{movie_id}	Delete a movie and reindex IDs
 
-🧪 Testing via Swagger
+Testing via Swagger
 After starting the app, open your browser at:
-👉 http://localhost:8000/docs
+http://localhost:8000/docs
 
 Run these example tests:
 
@@ -64,6 +64,7 @@ PATCH /api/v1/movies/0 → partially updates only specified fields
 DELETE /api/v1/movies/3 → removes movie, reindexes IDs 0..n-1
 
 Notes
+
 This project uses an in-memory list as a mock database.
 All data is lost when the server restarts.
 Future versions could use SQLite or MongoDB for persistence.
@@ -71,10 +72,9 @@ Future versions could use SQLite or MongoDB for persistence.
 Example Run
 INFO:     Will watch for changes in these directories: ['.']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+
 Visit:
-
 Swagger UI → http://localhost:8000/docs
-
 ReDoc → http://localhost:8000/redoc
 
 Author: Ebrima Gajaga
